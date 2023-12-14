@@ -13,6 +13,7 @@ A `doi.colberg.dev` (soon `https://doi.chat`?) page can be accessed by replacing
 - [ ] our page has a basic comment section
 - [ ] people are emailed when someone comments on their paper
 - [ ] people are emailed when someone replies to their comment
+- [ ] like/dislike on papers
 
 ## possible long-term features
 
@@ -21,5 +22,28 @@ A `doi.colberg.dev` (soon `https://doi.chat`?) page can be accessed by replacing
 - [ ] (figure out how to monetize)
 - [ ] Chrome extension which enables / encourages regular use via redirects
 - [ ] paper discoverability?
-- [ ] verify commenters' identity (show field, credential, position, h-index, etc)
+- [ ] verify commenters' identity (show field, credential, position, h-index, etc) (per-user profiles, see their papers)
 - [ ] inter-hyperlink discussions based on citation/etc
+- [ ] authors of a paper able to provide document giving additional context (e.g. materials, calculations, code/data links). authors have special powers on the page to manage a separate section above all the comments
+- [ ] (manual?) way to associate multiple historical emails with one user
+- [ ] require e.g. @.edu or corporate email (ban @gmail? unclear) to ban throwaways / anon flamewars
+- [ ] authors can upload a copy of the PDF for download/view by everyone (streamline email -> pdf)
+- software coordination of peer review and publishing? disrupt journals? open-access repository? (Mattea: people publish in reputable journals in part for discoverability; if you own discoverability within a field you can disrupt journals) (is the peer review process—given a pool of qualified reviewers—in principle automatable?) (maybe even select these reviewers via algorithm based on topic similarity, instead of discrete "journal" buckets? look at citations, LLM the content, match to people who have similar published papers)
+
+## possible monetization strategies
+
+general philosophy: never restrict free flow of information or quality of discussion. monetize around status/discoverability
+
+- higher comment visibility / priority
+- NOT restrict access
+- reddit-style comment awards
+- something around anonymity in commenting/viewing?
+- extensive features for paper authors on their own papers
+- thumb on discoverability (ads)
+- universities may pay to have a research/discussion showcase page (like with journals)
+- pay for information curation in a field (e.g. weekly AI-gen newsletter of top papers)
+- pay for notifications of new papers in a field
+- ^^ general subscription which empowers field-specific researchers (notifs, recaps, etc)
+- if identity has been verified, pay to optionally hide email when commenting
+- peer review bounty system? ($100 to us, $25 to each reviewer)
+- pay to be able to update PDF / publish corrections (preprint -> final -> corrections, etc)
