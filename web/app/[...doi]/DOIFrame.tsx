@@ -9,6 +9,9 @@ export default function DOIFrame({ doi, href }: { doi: string; href?: string }) 
     href = href.replace("http://", "https://")
   }
 
+  if (href) console.log("loading iframe from href", href)
+  else console.log("loading iframe from DOI", doi)
+
   return (
     <iframe
       className="flex-grow border-black border shadow-lg"
