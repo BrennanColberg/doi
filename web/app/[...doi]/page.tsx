@@ -20,6 +20,8 @@ export default async function DoiPage({ params }: { params: { doi: string[] } })
         src={`https://doi.org/${doi}`}
         // TODO maybe check for 404 in an `onload` here instead?
         //      as all invalid DOIs at `doi.org` show the same page
+        onError={(error) => console.error("onError", error)}
+        onErrorCapture={(error) => console.error("onErrorCapture", error)}
       />
       <pre>{JSON.stringify(params, null, 2)}</pre>
     </main>
