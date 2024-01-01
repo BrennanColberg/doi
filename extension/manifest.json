@@ -1,0 +1,15 @@
+{
+	"manifest_version": 3,
+	"name": "DOI Chat",
+	"permissions": ["declarativeNetRequestWithHostAccess", "storage"],
+	"host_permissions": ["*://*.doi.org/10.*"],
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "ruleset1",
+				"enabled": true,
+				"path": "rules.json"
+			}
+		]
+	}
+}
