@@ -9,6 +9,8 @@
   - this may get spammy if everything's in one channel
 - make discussions threadable (tree-like, similar to reddit/twitter)
 - automatically extract emails of authors, add to notifs for viral growth
+  - can do this manually to start; when a comment is left, I go input email myself
+  - I imagine this will be a bespoke process for most sites?
 - get actual domain
 - release chrome extension
 - like/dislike system

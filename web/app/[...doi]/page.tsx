@@ -40,6 +40,7 @@ export default async function DoiPage({ params }: { params: { doi: string[] } })
     <main className="w-screen h-screen flex flex-col justify-start p-5 gap-5">
       {/* iframe the actual site for readability */}
       {/* TODO add button to go to actual site? */}
+      {/* TODO add button to download (`sci-hub.se/$DOI`) after copyright disclaimer */}
       {iframeable ? (
         <DOIFrame href={href} />
       ) : (
