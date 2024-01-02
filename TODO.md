@@ -1,7 +1,6 @@
 ## more of a technical list
 
-- automatically extract title/author/abstract/pdf/etc for each DOI
-  - download pdf locally in frontend maybe? to use the user's academic credentials
+- (continue to) display information extracted from bibtex in a good manner
 - basic db to persist messages (= { email, doi, text, timestamp })
 - messaging mvp: channel-style sequential messages. no threads/etc to start
 - basic email login system (restrict to edu / ban common email providers?)

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import DOIFrame from "./DOIFrame"
 import Link from "next/link"
 import DownloadDOI from "./DownloadDOI"
+import { parse } from "@retorquere/bibtex-parser"
 
 export default async function DoiPage({ params }: { params: { doi: string[] } }) {
   // verify the DOI and find info about it
@@ -37,8 +38,32 @@ export default async function DoiPage({ params }: { params: { doi: string[] } })
   //       so for now we just assume *any* restriction blocks our iframes
   if (csp?.toLowerCase().includes("frame-ancestors")) iframeable = false
 
+  // get bibtex of site for meta tags, showing data, etc
+  const bibtexResponse = await fetch(`https://doi.org/${doi}`, { headers: { Accept: "application/x-bibtex" } })
+  const bibtexText = await bibtexResponse.text()
+  console.log("bibtex:", bibtexText)
+  const bibliography = parse(bibtexText)
+  const data = bibliography.entries[0]
+  console.log({ doi, data })
+
   return (
     <main className="w-screen h-screen flex flex-col justify-start p-5 gap-5">
+      {data?.fields?.title && <h1 className="text-2xl font-bold">{data.fields.title}</h1>}
+      {data?.fields?.author && (
+        <p className="text-lg">
+          {data.fields.author.join("; ")} {data?.fields?.year && <span className="text-lg"> ({data.fields.year})</span>}
+        </p>
+      )}
+
+      {(data?.fields?.journal ?? data?.fields?.publisher) && (
+        <p className="text-lg">
+          {data.fields.journal ?? data.fields.publisher}
+          {data?.fields?.volume && <span> volume {data.fields.volume}</span>}
+          {data?.fields?.number && <span> number {data.fields.number}</span>}
+          {data?.fields?.pages && <span> page {data.fields.pages}</span>}
+        </p>
+      )}
+
       {/* iframe the actual site for readability */}
       {/* TODO add button to go to actual site? */}
       {/* TODO add button to download (`sci-hub.se/$DOI`) after copyright disclaimer */}
@@ -54,8 +79,9 @@ export default async function DoiPage({ params }: { params: { doi: string[] } })
         </p>
       )}
 
-      <pre>{JSON.stringify({ doi }, null, 2)}</pre>
       <DownloadDOI doi={doi} />
+
+      {/* {data.fields && <pre>{JSON.stringify(data.fields, undefined, 2)}</pre>} */}
     </main>
   )
 }

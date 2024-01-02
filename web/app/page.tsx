@@ -17,6 +17,13 @@ export default function Home() {
           </Link>{" "}
           where iframe is disabled by the site
         </li>
+
+        <li>
+          <Link href="/10.48550/arXiv.2312.17288" className="text-blue-500 underline">
+            example
+          </Link>{" "}
+          from arXiv
+        </li>
       </ul>
     </main>
   )
