@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation"
 import DOIFrame from "./DOIFrame"
 import Link from "next/link"
+import DownloadDOI from "./DownloadDOI"
 
 export default async function DoiPage({ params }: { params: { doi: string[] } }) {
   // verify the DOI and find info about it
@@ -52,7 +53,9 @@ export default async function DoiPage({ params }: { params: { doi: string[] } })
           .
         </p>
       )}
+
       <pre>{JSON.stringify({ doi }, null, 2)}</pre>
+      <DownloadDOI doi={doi} />
     </main>
   )
 }
