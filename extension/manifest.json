@@ -1,6 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "DOI Chat",
+	"version": "1.0",
 	"permissions": ["declarativeNetRequestWithHostAccess", "storage"],
 	"host_permissions": ["*://*.doi.org/10.*"],
 	"declarative_net_request": {
