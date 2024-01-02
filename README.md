@@ -9,7 +9,7 @@ A `doi.colberg.dev` (soon `https://doi.chat`?) page can be accessed by replacing
 - [ ] homepage explaining this strategy
 - [ ] login button/flow (Google or email)
 - [ ] replacing `doi.org` in URLs shows a basic page with info from that paper
-- [ ] our page has a back-link to the `doi` slug (perhaps with iframe)
+- [x] our page has a back-link to the `doi` slug (perhaps with iframe)
 - [ ] our page has a basic comment section
 - [ ] people are emailed when someone comments on their paper
 - [ ] people are emailed when someone replies to their comment
@@ -20,15 +20,15 @@ A `doi.colberg.dev` (soon `https://doi.chat`?) page can be accessed by replacing
 - [ ] dashboard for users with their recent conversations/etc
 - [ ] more features for reading/collecting/discussing academic papers
 - [ ] (figure out how to monetize)
-- [ ] Chrome extension which enables / encourages regular use via redirects
+- [x] Chrome extension which enables / encourages regular use via redirects
 - [ ] paper discoverability?
 - [ ] verify commenters' identity (show field, credential, position, h-index, etc) (per-user profiles, see their papers)
 - [ ] inter-hyperlink discussions based on citation/etc
-- [ ] authors of a paper able to provide document giving additional context (e.g. materials, calculations, code/data links). authors have special powers on the page to manage a separate section above all the comments
+- [ ] authors of a paper able to provide documents giving additional context (e.g. materials, calculations, code/data links). authors have special powers on the page to manage a separate section above all the comments
 - [ ] (manual?) way to associate multiple historical emails with one user
-- [ ] require e.g. @.edu or corporate email (ban @gmail? unclear) to ban throwaways / anon flamewars
+- [ ] require e.g. @.edu or corporate emails (ban @gmail? unclear) to ban throwaways / anon flamewars
 - [ ] authors can upload a copy of the PDF for download/view by everyone (streamline email -> pdf)
-- software coordination of peer review and publishing? disrupt journals? open-access repository? (Mattea: people publish in reputable journals in part for discoverability; if you own discoverability within a field you can disrupt journals) (is the peer review process—given a pool of qualified reviewers—in principle automatable?) (maybe even select these reviewers via algorithm based on topic similarity, instead of discrete "journal" buckets? look at citations, LLM the content, match to people who have similar published papers)
+- software coordination of peer review and publishing? disrupt journals? open-access repository? (Mattea: people publish in reputable journals in part for discoverability; if you own discoverability within a field you can disrupt journals) (is the peer review process—given a pool of qualified reviewers—in principle automatable?) (maybe even select these reviewers via some algorithm based on topic similarity, instead of discrete "journal" buckets? look at citations, LLM the content, match to people who have similar published papers)
 
 ## possible monetization strategies
 
